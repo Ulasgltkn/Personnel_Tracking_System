@@ -8,8 +8,8 @@ import java.util.Optional;
 public interface WorkRepository extends JpaRepository<Work, Integer> {
     Work findByStatus(String status);
 
-    Optional<Work> findByStatusAndUser_Id(String status, int id);
 
-    Optional<Work> findByUser_Id(int id);
+
+
 
 }

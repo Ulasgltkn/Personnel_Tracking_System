@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     private final UserService userService;
 
-    @PostMapping("/save")
+  /*  @PostMapping("/save")
     public ResponseEntity<?> saveUser(@RequestBody User user){
 
         return  userService.saveUser(user);
 
-    }
+    }*/
 
     @GetMapping("/get/info")
     public ResponseEntity<?> myInfo(@RequestParam int id){

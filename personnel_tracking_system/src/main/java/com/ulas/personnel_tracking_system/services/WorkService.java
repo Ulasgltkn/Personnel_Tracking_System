@@ -5,10 +5,10 @@ import org.springframework.http.ResponseEntity;
 
 public interface WorkService {
 
-    public ResponseEntity<?> listWorkStatusForUser(String status,int id);
+   // public ResponseEntity<?> listWorkStatusForUser(String status,int id);
 
     public ResponseEntity<?> listWorkAll();
-    public ResponseEntity<?> listWorkAllForUser(int id);
+   // public ResponseEntity<?> listWorkAllForUser(int id);
     public ResponseEntity<?> createWork(Work work);
     public ResponseEntity<?> listWorkStatus(String status);
 }

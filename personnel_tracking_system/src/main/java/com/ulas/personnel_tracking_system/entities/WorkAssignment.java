@@ -1,22 +1,19 @@
 package com.ulas.personnel_tracking_system.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
 @Data
-
-public class Work extends Base{
-
+public class WorkAssignment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
-    private String task;
+    @ManyToOne
+    private User user;
 
-    private String status;
-
-
-
+    @ManyToOne
+    private Work work;
+    // diğer alanlar, getter ve setter'lar
 }

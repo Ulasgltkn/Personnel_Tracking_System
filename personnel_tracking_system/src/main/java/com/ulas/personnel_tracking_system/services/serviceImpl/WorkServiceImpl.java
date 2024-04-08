@@ -38,7 +38,7 @@ public class WorkServiceImpl implements WorkService {
         }
     }
 
-    @Override
+   /* @Override
     public ResponseEntity<?> listWorkStatusForUser(String status, int id) {
         Map<String,Object> hashMap = new LinkedHashMap<>();
         Optional<Work> optionalWork = workRepository.findByStatusAndUser_Id(status,id);
@@ -57,7 +57,7 @@ public class WorkServiceImpl implements WorkService {
             return new ResponseEntity<>(hashMap,HttpStatus.BAD_REQUEST);
         }
 
-    }
+    }*/
 
 
 
@@ -76,7 +76,7 @@ public class WorkServiceImpl implements WorkService {
         }
     }
 
-    @Override
+  /*  @Override
     public ResponseEntity<?> listWorkAllForUser( int id) {
         Map<String,Object> hashMap = new LinkedHashMap<>();
         Optional<Work> optionalWork = workRepository.findByUser_Id(id);
@@ -95,11 +95,12 @@ public class WorkServiceImpl implements WorkService {
             return new ResponseEntity<>(hashMap,HttpStatus.BAD_REQUEST);
         }
 
-    }
+    }*/
 
     @Override
     public ResponseEntity<?> createWork(Work work) {
         Map<String, Object> hashMap = new LinkedHashMap<>();
+
         Optional<Work> optionalWork = workRepository.findById(work.getId());
 
         try {
