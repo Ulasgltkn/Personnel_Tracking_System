@@ -1,10 +1,8 @@
 package com.ulas.personnel_tracking_system.restControllers;
 
-import com.ulas.personnel_tracking_system.entities.Admin;
 import com.ulas.personnel_tracking_system.entities.User;
 import com.ulas.personnel_tracking_system.services.UserService;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

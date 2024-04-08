@@ -112,12 +112,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ResponseEntity<?> getUser(String name) {
+    public ResponseEntity<?> getUser(String email) {
         Map<String, Object> hashMap = new LinkedHashMap<>();
         try {
-            Optional<User> optionalAdmin = userRepository.findByName(name);
+            Optional<User> optionalAdmin = userRepository.findByEmail(email);
             if (optionalAdmin.isPresent()) {
-                hashMap.put("result", userRepository.findByName(name));
+                hashMap.put("result", userRepository.findByEmail(email));
                 hashMap.put("status", true);
                 return new ResponseEntity<>(hashMap, HttpStatus.OK);
             }
